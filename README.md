@@ -60,6 +60,14 @@ Başarıyla built ettiysek artık çalıştırabiliriz;
 docker run -d --env-file .env --name autofrag dtrivalz
 
 ```
+
+Tebrikler, başarıyla container'ı oluşturdunuz. Container'ı kontrol etmek için aşağıdaki komutu kullanabilirsiniz.
+
+
+```bash
+docker logs -f autofrag
+
+```
 ## Geri Bildirim
 
 Herhangi bir geri bildiriminiz varsa, lütfen dtractus@gmail.com adresinden bana ulaşın.
