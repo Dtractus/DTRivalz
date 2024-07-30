@@ -62,7 +62,7 @@ def claim():
             'from': account.address,
             'to': contract_address,
             'nonce': nonce,
-            'gas': 100000,
+            'gas': 300000,
             'gasPrice': web3.to_wei('0.01', 'gwei'),
             'data': method_id
         }
@@ -81,7 +81,7 @@ def runforestrun():
             while claimable_frag() > 0:
                 try:
                     claim()
-                    time.sleep(5)
+                    time.sleep(15)
                 except ContractLogicError as e:
                     logger.error(f"Kontrat Çağrı Hatası: {e}")
                 except InvalidAddress as e:
