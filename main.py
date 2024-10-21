@@ -42,7 +42,7 @@ gas_price = web3.eth.gas_price
 
 def claimable_frag():
     try:
-        data = f"0x02d9c737000000000000000000000000{account.address[2:]}"
+        data = f"0x89885049000000000000000000000000{account.address[2:]}"
         from_address = web3.to_checksum_address('0x24edfad36015420a84573684644f6dc74f0ba8c5')
         response = web3.eth.call({
             'from': from_address,
