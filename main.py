@@ -65,7 +65,7 @@ def claim():
             'to': contract_address,
             'nonce': nonce,
             'gas': gas_limit,
-            'gasPrice': web3.utils.toHex(gas_price),
+            'gasPrice': hex(gas_price),
             'data': method_id
         }
         signed_tx = web3.eth.account.sign_transaction(tx, private_key)
