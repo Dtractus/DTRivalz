@@ -69,7 +69,7 @@ def claim():
             'data': method_id
         }
         signed_tx = web3.eth.account.sign_transaction(tx, private_key)
-        tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction(hex))
+        tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
         receipt = web3.eth.wait_for_transaction_receipt(tx_hash)
         logger.success(f"İşlem Onaylandı: {receipt.transactionHash.hex()}")
         return receipt.transactionHash.hex()
@@ -83,7 +83,7 @@ def runforestrun():
             while claimable_frag() > 0:
                 try:
                     claim()
-                    time.sleep(15)
+                    time.sleep(7)
                 except ContractLogicError as e:
                     logger.error(f"Kontrat Çağrı Hatası: {e}")
                 except InvalidAddress as e:
