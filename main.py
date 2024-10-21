@@ -38,7 +38,7 @@ contract_address = web3.to_checksum_address(contract_address)
 # Method ID for claim() function
 method_id = "0x4e71d92d"
 gas_limit = 300000
-gas_price = web3.eth.getGasPrice()
+gas_price = web3.eth.gas_price
 
 def claimable_frag():
     try:
